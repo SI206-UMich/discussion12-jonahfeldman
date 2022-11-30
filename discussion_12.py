@@ -16,6 +16,8 @@ def setUpDatabase(db_name):
 # TASK 1
 # CREATE TABLE FOR EMPLOYEE INFORMATION IN DATABASE AND ADD INFORMATION
 def create_employee_table(cur, conn):
+
+    cur.execute('create table if not exists employees (employee_id INTEGER PRIMARY KEY, first_name TEXT, last_name TEXT, job_id INTEGER, hire_date DATE, salary NUMBER)')
     pass
 
 # ADD EMPLOYEE'S INFORMTION TO THE TABLE
