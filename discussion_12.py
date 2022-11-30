@@ -34,7 +34,7 @@ def add_employee(filename, cur, conn):
     data = json.loads(file_data)
     for item in data:
         emp_id = item["employee_id"]
-        f_name = item["first"]
+        f_name = item["first_name"]
         l_name = item["last_name"]
         hire_date = item["hire_date"]
         job_id = item["job_id"]
@@ -55,6 +55,7 @@ def job_and_hire_date(cur, conn):
 # Apply JOIN clause to match individual employees
 def problematic_salary(cur, conn):
 
+    cur.execute()
 
     pass
 
