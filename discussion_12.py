@@ -40,8 +40,8 @@ def add_employee(filename, cur, conn):
         job_id = item["job_id"]
         salary  = item["salary"]
 
-        cur.execute("insert into employees ")
-
+        cur.execute("insert or ignore into employees (employee_id, first_name, last_name, job_id, hire_date, salary) values (?,?,?,?,?,?)", (emp_id, f_name, l_name, job_id, hire_date, salary))
+        conn.commit()
     pass
 
 # TASK 2: GET JOB AND HIRE_DATE INFORMATION
